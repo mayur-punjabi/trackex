@@ -2,6 +2,7 @@ TrackEx - The Expense Tracker
 -
 Features:
  - [ ] Add expense
+ - [ ] Add multiple expenses
  - [ ] Change date
  - [ ] Store expenses locally
  - [ ] Delete expense
