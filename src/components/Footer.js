@@ -13,7 +13,9 @@ export default class Footer extends React.Component {
           change date
         </Button>
         <Button
-          variant="outlined"
+          disableElevation
+          variant="contained"
+          color="primary"
           style={{ fontWeight: "bold" }}
           onClick={() => this.props.setAddExpenseOpen(true)}
         >

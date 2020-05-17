@@ -18,7 +18,6 @@ export default class Header extends React.Component {
             <Typography
               variant="h5"
               style={{
-                fontFamily: "Patrick Hand SC",
                 letterSpacing: "0.25rem"
               }}
             >
