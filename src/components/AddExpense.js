@@ -16,11 +16,13 @@ export default class AddExpense extends React.Component {
   constructor(props) {
     super(props);
     this.state = { expense: { amount: 1, description: "", moneyFlow: "out" } };
+
   }
 
   Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
   });
+
 
   updateExpense = event => {
     const currentInput = event.target;
@@ -43,11 +45,13 @@ export default class AddExpense extends React.Component {
     this.props.setAddExpenseOpen(false);
   };
 
+
   render() {
     return (
       <Dialog
         fullScreen
         open={this.props.isAddExpenseOpen}
+
         onClose={this.clearFields}
         TransitionComponent={this.Transition}
       >
@@ -135,6 +139,7 @@ export default class AddExpense extends React.Component {
             </DialogActions>
           </Box>
         </form>
+
       </Dialog>
     );
   }

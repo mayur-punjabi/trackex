@@ -19,6 +19,7 @@ export default class App extends React.Component {
       isCalendarOpen: false,
       isAddExpenseOpen: false,
       selectedDate: new Date(),
+
       expenses: []
     };
   }
@@ -57,10 +58,28 @@ export default class App extends React.Component {
 
   compnentDidMount() {
     console.log("hi");
+
   }
+
+  setCalendarOpen = stateToUpdate => {
+    this.setState({
+      isCalendarOpen: stateToUpdate
+    });
+  };
+
+  handleDateChange = newDate => {
+    this.setState({
+      selectedDate: newDate
+    });
+  };
+
+  setAddExpenseOpen = stateToUpdate => {
+    this.setState({ isAddExpenseOpen: stateToUpdate });
+  };
 
   render() {
     return (
+
       <ThemeProvider theme={theme}>
         <Box display="flex" flexDirection="column" style={{ height: "100vh" }}>
           <Header
@@ -81,6 +100,7 @@ export default class App extends React.Component {
           />
         </Box>
       </ThemeProvider>
+
     );
   }
 }

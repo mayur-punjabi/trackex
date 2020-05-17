@@ -1,6 +1,8 @@
 import React from "react";
+
 import { Box, IconButton } from "@material-ui/core/";
 import { red, green, blue } from "@material-ui/core/colors/";
+
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
 
@@ -9,13 +11,13 @@ export default class Expenses extends React.Component {
     const expenses = this.props.expenses.length ? (
       <Box flexGrow={1} style={{ overflowY: "auto" }}>
         {this.props.expenses.map((expense, index) => {
+
           return (
             <Box
               borderColor="grey.300"
               display="flex"
               alignItems="center"
               data-index={index}
-              m={2}
               p={1}
               border={1}
               borderRadius={4}
